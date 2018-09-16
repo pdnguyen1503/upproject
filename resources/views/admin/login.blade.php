@@ -8,21 +8,21 @@
   <meta name="author" content="GeeksLabs">
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <base href="{{asset('')}}">
-  <link href="admin_asset/shortcut icon" href="admin_asset/img/favicon.png">
+  <link href="{{asset('public/admin_asset')}}/shortcut icon" href="admin_asset/img/favicon.png">
 
   <title>Login Page 2 | Creative - Bootstrap 3 Responsive Admin Template</title>
 
   <!-- Bootstrap CSS -->
-  <link href="admin_asset/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{asset('public/admin_asset')}}/css/bootstrap.min.css" rel="stylesheet">
   <!-- bootstrap theme -->
-  <link href="admin_asset/css/bootstrap-theme.css" rel="stylesheet">
+  <link href="{{asset('public/admin_asset')}}/css/bootstrap-theme.css" rel="stylesheet">
   <!--external css-->
   <!-- font icon -->
-  <link href="admin_asset/css/elegant-icons-style.css" rel="stylesheet" />
-  <link href="admin_asset/css/font-awesome.css" rel="stylesheet" />
+  <link href="{{asset('public/admin_asset')}}/css/elegant-icons-style.css" rel="stylesheet" />
+  <link href="{{asset('public/admin_asset')}}t/css/font-awesome.css" rel="stylesheet" />
   <!-- Custom styles -->
-  <link href="admin_asset/css/style.css" rel="stylesheet">
-  <link href="admin_asset/css/style-responsive.css" rel="stylesheet" />
+  <link href="{{asset('public/admin_asset')}}/css/style.css" rel="stylesheet">
+  <link href="{{asset('public/admin_asset')}}/css/style-responsive.css" rel="stylesheet" />
   
 </head>
 

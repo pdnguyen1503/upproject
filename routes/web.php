@@ -11,7 +11,7 @@
 |
 */
 
-Use App\Products;
+Use App\Product;
 
 Route::get('/', function () {
     return view('welcome');
@@ -26,7 +26,7 @@ Route::get('layout', function(){
 });
 
 Route::get('/thu', function(){
-	$products = Products::find(1);
+	$products = Product::find(1);
 	foreach ($products->category as $category) {
 		echo $category->name."</br>";
 	}
@@ -53,15 +53,15 @@ Route::group(['prefix' => 'admin'], function(){
 	});
 
 	Route::group(['prefix' => 'author'], function(){
-		Route::get('list', 'AuthorController@getList')->name('author.list');
+		Route::get('list', 'AuthorsController@getList')->name('author.list');
 		// Route add author
-		Route::get('add', 'AuthorController@getAdd');
-		Route::post('add', 'AuthorController@postAdd');
+		Route::get('add', 'AuthorsController@getAdd');
+		Route::post('add', 'AuthorsController@postAdd');
 		//route eidt author
-		Route::get('edit/{id}', 'AuthorController@getEdit');
-		Route::post('edit/{id}', 'AuthorController@postEdit');
+		Route::get('edit/{id}', 'AuthorsController@getEdit');
+		Route::post('edit/{id}', 'AuthorsController@postEdit');
 
-		Route::get('delete/{id}', 'AuthorController@deleteAuthor');
+		Route::get('delete/{id}', 'AuthorsController@deleteAuthor');
 
 	});
 
@@ -120,4 +120,4 @@ Route::group(['prefix' => 'admin'], function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+route::get('/','Client\HomeController@index');

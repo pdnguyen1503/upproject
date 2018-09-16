@@ -39,4 +39,5 @@ class OrdersController extends Controller
         $orders->delete();
         return redirect('admin/orders/list')->with('message', 'delete thanh cong');
     }
+
 }
