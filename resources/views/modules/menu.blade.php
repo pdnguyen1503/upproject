@@ -17,40 +17,26 @@
                         <div class="custom-menu">
                             <div class="row">
                                 @foreach ($listcate as $category )
-                                    @if ($category->parent_id = $item->id)
-                                <div class="col-md-4">
+                                    @if ($category->parent_id == $item->id)
+                                <div class="col-md-6">
                                     <ul class="list-links">
-
                                         <li>
-                                            <h3 class="list-links-title">{{$category->name}}</h3></li>
-
-                                        <li><a href="#">Women’s Clothing</a></li>
-                                        <li><a href="#">Men’s Clothing</a></li>
-                                        <li><a href="#">Phones & Accessories</a></li>
-                                        <li><a href="#">Jewelry & Watches</a></li>
-                                        <li><a href="#">Bags & Shoes</a></li>
+                                            <h3 href="#" class="list-links-title">{{$category->name}}</h3></li>
+                                        @foreach($listcate as $value)
+                                            @if ($value->parent_id==$category->id)
+                                        <li><a href="#">{{$value->name}}</a></li>
+                                            @endif
+                                            @endforeach
                                     </ul>
                                     <hr class="hidden-md hidden-lg">
-                                </div>@endif
+                                </div>
+                                    @endif
                                     @endforeach
                             </div>
-                            <div class="row hidden-sm hidden-xs">
-                                <div class="col-md-12">
-                                    <hr>
-                                    <a class="banner banner-1" href="#">
-                                        <img src="./img/banner05.jpg" alt="">
-                                        <div class="banner-caption text-center">
-                                            <h2 class="white-color">NEW COLLECTION</h2>
-                                            <h3 class="white-color font-weak">HOT DEAL</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
                         </div>
-                        @endif
-                        @endforeach
                     </li>
-
+                        @endif
+                    @endforeach
                 </ul>
             </div>
             <!-- /category nav -->

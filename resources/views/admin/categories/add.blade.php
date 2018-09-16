@@ -29,6 +29,12 @@
                     <input class="form-control" id="cname" name="name"  type="text" required />
                   </div>
                 </div>
+                  <div class="form-group ">
+                  <label for="cname" class="control-label col-lg-2">parent_id <span class="required">*</span></label>
+                  <div class="col-lg-10">
+                    <input class="form-control" id="cname" name="parent_id"  type="text" required />
+                  </div>
+                </div>
                 <div class="form-group">
                   <label for="" class="control-label col-lg-2">Sort</label>
                   <div class="col-lg-10">

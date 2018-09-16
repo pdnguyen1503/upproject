@@ -33,12 +33,13 @@ class CategoriesController extends Controller
             'name.max'      => 'name tu 3-100',
         ]);
 
-        // $categories = new Categories;
-        // $categories->name = $request->name;
-        // $categories->sort = $request->sort;
-        // $categories->save();
-        $paramCreate = $request->only(['name', 'sort']);
-        Category::create($paramCreate);
+         $categories = new Category();
+         $categories->name = $request->name;
+         $categories->parent_id = $request->parent_id;
+         $categories->sort = $request->sort;
+         $categories->slug = str_slug($request->name);
+        $categories->save();
+
         return redirect('admin/categories/list')->with('message', 'add category success');
     }
     
