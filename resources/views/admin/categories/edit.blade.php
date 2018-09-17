@@ -20,6 +20,12 @@
                     <input class="form-control" id="name" name="name"  type="text" value="{{$categories->name}}" required/>
                   </div>
                 </div>
+                  <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">parent_id <span class="required">*</span></label>
+                      <div class="col-lg-10">
+                          <input class="form-control" id="cname" name="parent_id"  type="text" value="{{$categories->parent_id}}"required />
+                      </div>
+                  </div>
                 <div class="form-group">
                   <label for="" class="control-label col-lg-2">Sort</label>
                   <div class="col-lg-10">

@@ -11,6 +11,7 @@
 			<tr>
 				<th>id</th>
 				<th>name</th>
+				<th>parent_id</th>
 				<th>sort</th>
 				<th>edit</th>
 				<th>delete</th>
@@ -22,6 +23,7 @@
 				<tr>
 					<td>{{$category->id}}</td>
 					<td>{{$category->name}}</td>
+					<td>{{$category->parent_id	}}</td>
 					<td>{{$category->sort}}</td>
 					<td><span class="glyphicon glyphicon-pencil"></span><a href="admin/categories/edit/{{$category->id}}">edit</a></td>
 					<td><span class="glyphicon glyphicon-pencil"></span><a href="{{route('categories.delete', $category->id)}}">delete</a></td>

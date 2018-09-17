@@ -11,7 +11,7 @@
 
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
-
+    <link href="{!!url('public/front-end/front-end-style.css')!!}" rel="stylesheet">
     <!-- Bootstrap -->
     <link type="text/css" rel="stylesheet" href="{{asset('public/client')}}/css/bootstrap.min.css" />
 

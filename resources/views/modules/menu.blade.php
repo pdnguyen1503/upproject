@@ -24,7 +24,7 @@
                                             <h3 href="#" class="list-links-title">{{$category->name}}</h3></li>
                                         @foreach($listcate as $value)
                                             @if ($value->parent_id==$category->id)
-                                        <li><a href="#">{{$value->name}}</a></li>
+                                        <li><a href="{{route('category',$value->slug)}}">{{$value->name}}</a></li>
                                             @endif
                                             @endforeach
                                     </ul>
