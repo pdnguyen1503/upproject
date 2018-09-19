@@ -122,3 +122,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 route::get('/','Client\HomeController@index');
 route::get('/{slug}','Client\HomeController@GetCategories')->name('category');
+route::get('/detail/{name}','Client\HomeController@GetDetail')->name('getdetail');

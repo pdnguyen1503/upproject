@@ -24,14 +24,15 @@
                         <div class="product-body">
                             <h3 class="product-price">{{$item->price}}</h3>
                             <div class="product-rating">
-                            @for ($i=1;$i==$item->rating;$i++)
+                                <?php $rate=$item->rating; ?>
+                                    @for ($i=1; $i<=$rate;$i++)
                                     <i class="fa fa-star"></i>
                                 @endfor
-                                @for ($i=1;$i==5-$item->rating;$i++)
-                                <i class="fa fa-star-o empty"></i
+                                @for ($i=5;$i>$rate;$i--)
+                                <i class="fa fa-star-o empty"></i>
                                     @endfor
                             </div>
-                            <h2 class="product-name"><a href="#">{{$item->name}}</a></h2>
+                            <h2 class="product-name"><a href="{{route('getdetail',$item->name)}}">{{$item->name}}</a></h2>
                             <div class="product-btns">
                                 <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
                                 <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>

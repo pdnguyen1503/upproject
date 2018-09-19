@@ -24,7 +24,7 @@ class ProductsController extends Controller
 
     public function postAdd(Request $request)
     {
-        $file_name=$request->file('image')->getClientOriginalName();
+
         $product=new product();
         $product-> name=$request->name;
         $product-> id_author =$request->id_author;
@@ -32,19 +32,47 @@ class ProductsController extends Controller
         $product-> intro =$request->intro;
         $product-> content = $request-> content;
         $product-> price =$request-> price;
-        $product-> image =$file_name;
-        $request-> file('image')->move('public/upload/product',$file_name);
+        //$product-> image =$file_name;
+
+
+        if ($request->hasFile('image')) {
+
+                $duoifile=$request->file('image')->getClientOriginalExtension();
+                if ($duoifile != 'jpg' && $duoifile !='png' && $duoifile!='jpeg')
+                {
+                    return redirect('admin/products/add')->with('message', 'Bạn chỉ được chọn file có đuôi là jpg;png;jpeg');
+                }
+
+            $file_name=$request->file('image')->getClientOriginalName();
+                if (file_exists('public/upload/product/'.$file_name)) {
+                    $file_name=str_random(4).'_'.$file_name;
+                }
+                    $product-> image =$file_name;
+                    $request->file('image')->move('public/upload/product', $file_name);
+
+        }
         $product->save();
         $product_id=$product->id;
         if ($request->hasFile('IProductDetail')) {
 
             foreach ($request->file('IProductDetail') as $fi) {
                 ($fi->getClientOriginalName());
+                //$file=$request->file('IProductDetail');
+                $duoi=$fi->getClientOriginalExtension();
+                if ($duoi != 'jpg' && $duoi !='png' && $duoi!='jpeg')
+                {
+                    return redirect('admin/products/add')->with('message', 'Bạn chỉ được chọn file có đuôi là jpg;png;jpeg');
+                }
+
                 $product_img = new Product_image();
                 if (isset($fi)) {
-                    $product_img->image = $fi->getClientOriginalName();
+                    $name=$fi->getClientOriginalName();
+                    if (file_exists('public/upload/Details/'.$name)) {
+                        $name=str_random(4).'_'.$name;
+                    }
+                    $product_img->image = $name;
                     $product_img->product_id = $product_id;
-                    $fi->move('public/upload/Details', $fi->getClientOriginalName());
+                    $fi->move('public/upload/Details', $name);
                     $product_img->save();
                 }
             }
