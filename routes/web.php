@@ -101,6 +101,7 @@ Route::group(['prefix' => 'admin'], function(){
 		Route::post('edit/{id}', 'ProductsController@postEdit');
 
 		Route::get('delete/{id}', 'ProductsController@deleteProducts');
+		route::get('deleteimg/{id}','ProductsController@deleteImg')->name('deleteImg');
 
 	});
 

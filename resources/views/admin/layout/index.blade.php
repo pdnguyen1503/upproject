@@ -25,10 +25,10 @@
   <!-- easy pie chart-->
   <link href="{{asset('public/admin_asset')}}/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen" />
   <!-- owl carousel -->
-  <link rel="{{asset('public/admin_asset')}}/stylesheet" href="css/owl.carousel.css" type="text/css">
+  <link rel="stylesheet" href="{{asset('public/admin_asset')}}/css/owl.carousel.css" type="text/css">
   <link href="{{asset('public/admin_asset')}}/css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
   <!-- Custom styles -->
-  <link rel="{{asset('public/admin_asset')}}/stylesheet" href="css/fullcalendar.css">
+  <link rel="stylesheet" href="{{asset('public/admin_asset')}}/css/fullcalendar.css">
   <link href="{{asset('public/admin_asset')}}/css/widgets.css" rel="stylesheet">
   <link href="{{asset('public/admin_asset')}}/css/style.css" rel="stylesheet">
   <link href="{{asset('public/admin_asset')}}/css/style-responsive.css" rel="stylesheet" />
@@ -88,10 +88,11 @@
   <!-- container section start -->
 
   <!-- javascripts -->
+
   <script src="{{asset('public/admin_asset')}}/js/jquery.js"></script>
   <script src="{{asset('public/admin_asset')}}/js/jquery-ui-1.10.4.min.js"></script>
   <script src="{{asset('public/admin_asset')}}/js/jquery-1.8.3.min.js"></script>
-  <script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+  <script type="text/javascript" src="{{asset('public/admin_asset')}}/js/jquery-ui-1.9.2.custom.min.js"></script>
   <!-- bootstrap -->
   <script src="{{asset('public/admin_asset')}}/js/bootstrap.min.js"></script>
   <!-- nice scroll -->
@@ -128,7 +129,7 @@
     <script src="{{asset('public/admin_asset')}}/js/sparklines.js"></script>
     <script src="{{asset('public/admin_asset')}}/js/charts.js"></script>
     <script src="{{asset('public/admin_asset')}}/js/jquery.slimscroll.min.js"></script>
-
+     <script src="{{asset('public/admin_asset')}}/js/myscript.js"></script>
      <script type="text/javascript" language="javascript" src="{{asset('public/admin_asset')}}/ckeditor/ckeditor.js" ></script>
     <script>
       //knob

@@ -67,7 +67,8 @@
                   </div>
 
                   <div class="form-group ">
-                  <label for="cname" class="control-label col-lg-2">image <span class="required">*</span></label>
+                  <label for="cname" class="control-label col-lg-2">image <span class="required">*</span>
+                  </label>
                   <div class="col-lg-10">
                     <input class="form-control" id="cname" name="image" type="file" required />
                   </div>
